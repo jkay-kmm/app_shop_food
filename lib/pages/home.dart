@@ -1,3 +1,4 @@
+import 'package:app_shop_food/pages/details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -65,42 +66,48 @@ class _HomeState extends State<Home> {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                children: <Widget>[
-                  Container(
-                    margin: const EdgeInsets.all(4),
-                    child: Material(
-                      elevation: 5.0,
-                      borderRadius: BorderRadius.circular(20),
-                      child: Container(
-                        padding: const EdgeInsets.all(14),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "assets/images/salad2.png",
-                              height: 150,
-                              width: 150,
-                              fit: BoxFit.cover,
-                            ),
-                            Text(
-                              "Vegie Taco Hash",
-                              style: AppWidget.semiBooldTextFeildStyle(),
-                            ),
-                            const SizedBox(
-                              height: 5.0,
-                            ),
-                            Text(
-                              "Fresh and Healthy",
-                              style: AppWidget.LightTextFeildStyle(),
-                            ),
-                            const SizedBox(
-                              height: 5.0,
-                            ),
-                            Text(
-                              "\$25",
-                              style: AppWidget.semiBooldTextFeildStyle(),
-                            )
-                          ],
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Details()));
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.all(4),
+                      child: Material(
+                        elevation: 5.0,
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                          padding: const EdgeInsets.all(14),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                "assets/images/salad2.png",
+                                height: 150,
+                                width: 150,
+                                fit: BoxFit.cover,
+                              ),
+                              Text(
+                                "Vegie Taco Hash",
+                                style: AppWidget.semiBooldTextFeildStyle(),
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              Text(
+                                "Fresh and Healthy",
+                                style: AppWidget.LightTextFeildStyle(),
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              Text(
+                                "\$25",
+                                style: AppWidget.semiBooldTextFeildStyle(),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -169,20 +176,37 @@ class _HomeState extends State<Home> {
                         width: 120,
                         fit: BoxFit.cover,
                       ),
-                      const SizedBox(width: 20,),
+                      const SizedBox(
+                        width: 20,
+                      ),
                       Column(
                         children: [
                           Container(
-                              width: MediaQuery.of(context).size.width/2,
-                              child: Text("Medial Chickpea Salad", style: AppWidget.semiBooldTextFeildStyle(),)),
-                          const SizedBox(height: 5.0,),
+                              width: MediaQuery.of(context).size.width / 2,
+                              child: Text(
+                                "Medial Chickpea Salad",
+                                style: AppWidget.semiBooldTextFeildStyle(),
+                              )),
+                          const SizedBox(
+                            height: 5.0,
+                          ),
                           Container(
-                              width: MediaQuery.of(context).size.width/2,
-                              child: Text("Honey good cheese", style: AppWidget.LightTextFeildStyle(),),),
-                          const SizedBox(height: 5.0,),
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              "Honey good cheese",
+                              style: AppWidget.LightTextFeildStyle(),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 5.0,
+                          ),
                           Container(
-                            width: MediaQuery.of(context).size.width/2,
-                            child: Text("\$28", style: AppWidget.semiBooldTextFeildStyle(),),)
+                            width: MediaQuery.of(context).size.width / 2,
+                            child: Text(
+                              "\$28",
+                              style: AppWidget.semiBooldTextFeildStyle(),
+                            ),
+                          )
                         ],
                       )
                     ],
