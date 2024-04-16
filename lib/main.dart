@@ -1,6 +1,7 @@
 import 'package:app_shop_food/pages/bottomnav.dart';
 import 'package:app_shop_food/pages/home.dart';
 import 'package:app_shop_food/pages/login.dart';
+import 'package:app_shop_food/pages/onboarding.dart';
 import 'package:app_shop_food/pages/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:const SignUp(),
+      home:const Onboarding(),
       debugShowCheckedModeBanner: false,
     );
   }
